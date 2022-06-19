@@ -8,7 +8,7 @@ function showError(input, error) {
     const formControl = input.parentElement;
     formControl.className = 'formControl error';
     const small = formControl.querySelector('small');
-    small.innerHTML = message;
+    small.innerHTML = error;
 }
 
 function showSuccess(input) {
@@ -40,7 +40,7 @@ form.addEventListener('submit', (event) => {
     }
 
     if (subject.value == '') {
-        showError(subject, 'What is the subject?');
+        showError(subject, 'What is the Subject?');
     }
     else {
         showSuccess(subject);
